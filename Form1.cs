@@ -128,7 +128,7 @@ namespace test_selenium
                     //        }
                     //        catch { }
                     HttpRequest h = new HttpRequest();
-                    //var m = h.Get("https://api.viotp.com/users/balance?token=e208f71988894ea1ad4296f602db9dd7").ToString();
+                    //var m = h.Get("https://api.viotp.com/users/balance?token=e208f7198d8894ea1ad4296f602db9dd7").ToString();
                     //string pattern = "\"balance\"\\s*:\\s*(\\d+)";
 
                     //Match match = Regex.Match(m, pattern);
@@ -141,11 +141,11 @@ namespace test_selenium
                     //{
                     //    Console.WriteLine("Không tìm thấy balance.");
                     //}
-                    //string data = "{\"api_key\": \"f22233ec016d5207cd7af94f8a6a168e\"}";
+                    //string data = "{\"api_key\": \"f22233ec016d520d7cd7af94f8a6a168e\"}";
                     //var ma = h.Post("https://api.otpmmo.xyz/api/customer/user-info", data, "application/json").ToString();
                     //JObject obj = JObject.Parse(ma);
                     //string amount = (string)obj["data"]["amount"];
-                    var m = h.Get("https://api.viotp.com/request/getv2?token=e208f71988894ea1ad4296f602db9dd7&serviceId=698").ToString();
+                    var m = h.Get("https://api.viotp.com/request/getv2?token=e208f71988894ea1ad4d296f602db9dd7&serviceId=698").ToString();
                     Thread.Sleep(1000);
                     JObject obj = JObject.Parse(m);
                     string rePhone = (string)obj["data"]["re_phone_number"];
@@ -155,7 +155,7 @@ namespace test_selenium
                     {
 
 
-                        var mn = h.Get($"https://api.viotp.com/session/getv2?requestId={requestId}&token=e208f71988894ea1ad4296f602db9dd7").ToString();
+                        var mn = h.Get($"https://api.viotp.com/session/getv2?requestId={requestId}&token=e208f71988d894ea1ad4296f602db9dd7").ToString();
                   
                         JObject obaj = JObject.Parse(mn);
                         JToken smsContentToken = obaj["data"]["SmsContent"];
